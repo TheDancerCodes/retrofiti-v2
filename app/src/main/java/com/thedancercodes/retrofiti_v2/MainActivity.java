@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_secret).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getSecret();
+//                getSecret();
             }
         });
     }
@@ -88,42 +88,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void getSecret() {
-
-        Call<ResponseBody> call = songsService
-                .getSongs(token);
-
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-
-                // Check whether server response was successful
-                if (response.isSuccessful()) {
-
-                    // You get the user object back.
-                    try {
-                        Toast.makeText(MainActivity.this, response.body().string(), Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-
-                }
-                else {
-                    Toast.makeText(MainActivity.this, "Token is not correct.", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-
-                Toast.makeText(MainActivity.this, "Error :(", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-    }
+//    private void getSecret() {
+//
+//        Call<ResponseBody> call = songsService
+//                .getSongs(token);
+//
+//        call.enqueue(new Callback<ResponseBody>() {
+//            @Override
+//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//
+//                // Check whether server response was successful
+//                if (response.isSuccessful()) {
+//
+//                    // You get the user object back.
+//                    try {
+//                        Toast.makeText(MainActivity.this, response.body().string(), Toast.LENGTH_SHORT).show();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//
+//
+//                }
+//                else {
+//                    Toast.makeText(MainActivity.this, "Token is not correct.", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseBody> call, Throwable t) {
+//
+//                Toast.makeText(MainActivity.this, "Error :(", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
+//
+//    }
 
 
 }

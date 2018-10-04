@@ -3,7 +3,8 @@ package com.thedancercodes.retrofiti_v2.api;
 import com.thedancercodes.retrofiti_v2.models.Login;
 import com.thedancercodes.retrofiti_v2.models.User;
 
-import okhttp3.ResponseBody;
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -23,5 +24,5 @@ public interface SongService {
 
     // Access the music profiles
     @GET("profile/all")
-    Call<ResponseBody> getSongs(@Header("Authorization") String authToken);
+    Call<List<User>> getSongs(@Header("Authorization") String authToken);
 }
