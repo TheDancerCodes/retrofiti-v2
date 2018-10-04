@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.thedancercodes.retrofiti_v2.models.Login;
 import com.thedancercodes.retrofiti_v2.models.User;
-import com.thedancercodes.retrofiti_v2.api.SongsService;
+import com.thedancercodes.retrofiti_v2.api.SongService;
 
 import java.io.IOException;
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
-    SongsService songsService = retrofit.create(SongsService.class);
+    SongService songsService = retrofit.create(SongService.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

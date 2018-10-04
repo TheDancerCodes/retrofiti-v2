@@ -15,7 +15,7 @@ import retrofit2.http.POST;
  */
 
 // The Retrofit Interface
-public interface SongsService {
+public interface SongService {
 
     // Define the Login
     @POST("users/login")
