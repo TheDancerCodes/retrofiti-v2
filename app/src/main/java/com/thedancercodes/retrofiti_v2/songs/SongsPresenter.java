@@ -73,7 +73,7 @@ public class SongsPresenter {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
 
-                // If response is successful, we pass in the list of Books.
+                // If response is successful, we pass in the list of Songs.
                 if (response.isSuccessful()) {
                     songsView.showSongs(response.body());
                     Timber.i("Songs data was loaded from API."); // Log a message
@@ -86,7 +86,7 @@ public class SongsPresenter {
 
                 // Show an error message to our users and the log the failure.
                 songsView.showErrorMessage();
-                Timber.e(t, "Unable to load the books data from the API.");
+                Timber.e(t, "Unable to load the Songs data from the API.");
 
             }
         });

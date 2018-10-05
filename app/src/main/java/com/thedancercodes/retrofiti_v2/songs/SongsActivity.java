@@ -49,7 +49,7 @@ public class SongsActivity extends AppCompatActivity implements SongsContract.Vi
 
     @Override
     public void showErrorMessage() {
-        Toast.makeText(this, R.string.books_loading_unsuccessful, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.songs_loading_unsuccessful, Toast.LENGTH_SHORT).show();
     }
 
     private void configureLayout() {

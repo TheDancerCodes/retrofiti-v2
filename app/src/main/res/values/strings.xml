@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Retrofiti-v2</string>
+    <string name="app_name">Retrofiti-V2</string>
     <string name="thumbnail_image">thumbnail</string>
     <string name="pages_label">%d pages</string>
-    <string name="books_loading_unsuccessful">Unable to load the books.</string>
-    <string name="book_loading_unsuccessful">Unable to load the book</string>
+    <string name="songs_loading_unsuccessful">Unable to load the Songs.</string>
+    <string name="song_loading_unsuccessful">Unable to load the Song</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut enim et augue interdum pellentesque.
         Maecenas elementum nibh nulla, sit amet egestas dui tristique efficitur. Sed vitae feugiat magna. Nunc sed eros nulla.
         In molestie et neque fringilla egestas. Ut elementum scelerisque ligula in pulvinar.\n\nUt in neque at
