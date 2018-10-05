@@ -14,31 +14,36 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class Injector {
 
-    // Interceptor
-    public OkHttpClient provideLoggingCapableHttpClient() {
+    // Retrofit instance
+    public static Retrofit provideRetrofit(String baseUrl) {
+        return new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .client(provideOkHttpClient())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
 
-        // HttpLoggingInterceptor:
-        // Intercepts requests & responses and allows us to log the information on LogCat.
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+    // The OkHttpClient to which we add different interceptors
+    private static OkHttpClient provideOkHttpClient() {
+        return new OkHttpClient.Builder()
+                .addInterceptor(provideHttpLoggingInterceptor())
+                .build();
+    }
+
+    // HttpLoggingInterceptor:
+    // Intercepts requests & responses and allows us to log the information on LogCat.
+    private static HttpLoggingInterceptor provideHttpLoggingInterceptor() {
+        HttpLoggingInterceptor httpLoggingInterceptor =
+                new HttpLoggingInterceptor();
 
         // Check whether its a DEBUG build and set the Level to BODY (Full Logging).
         // If it isn’t, default back to NONE.
         // NOTE: Don’t log BODY in Production. 🙅🏾‍♂️
-        logging.setLevel(BuildConfig.DEBUG ? HttpLoggingInterceptor.Level.BODY
+        httpLoggingInterceptor.setLevel(BuildConfig.DEBUG ? HttpLoggingInterceptor.Level.HEADERS
                 : HttpLoggingInterceptor.Level.NONE);
-
-        return new OkHttpClient.Builder()
-                .addInterceptor(logging)
-                .build();
+        return httpLoggingInterceptor;
     }
 
-    // Retrofit instance
-    public static Retrofit provideRetrofit (String baseUrl) {
-        return new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-    }
 
     // The SongService
     public static SongService provideBookService() {
