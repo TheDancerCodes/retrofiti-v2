@@ -1,4 +1,4 @@
-package com.thedancercodes.retrofiti_v2.songs;
+package com.thedancercodes.retrofiti_v2.songlisting;
 
 import com.thedancercodes.retrofiti_v2.models.User;
 

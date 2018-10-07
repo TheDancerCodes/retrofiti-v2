@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/activity_songs"
-    tools:context=".songs.SongsActivity">
+    tools:context=".songlisting.SongsActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -1,7 +1,7 @@
 package com.thedancercodes.retrofiti_v2.di;
 
 import com.thedancercodes.retrofiti_v2.BuildConfig;
-import com.thedancercodes.retrofiti_v2.Constants;
+import com.thedancercodes.retrofiti_v2.utils.Constants;
 import com.thedancercodes.retrofiti_v2.SongApplication;
 import com.thedancercodes.retrofiti_v2.api.SongService;
 

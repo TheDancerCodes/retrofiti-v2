@@ -1,4 +1,4 @@
-package com.thedancercodes.retrofiti_v2.songs;
+package com.thedancercodes.retrofiti_v2.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -17,7 +17,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import okhttp3.ResponseBody;
 import timber.log.Timber;
 
 /**

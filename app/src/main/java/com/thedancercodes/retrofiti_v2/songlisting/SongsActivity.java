@@ -1,4 +1,4 @@
-package com.thedancercodes.retrofiti_v2.songs;
+package com.thedancercodes.retrofiti_v2.songlisting;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.thedancercodes.retrofiti_v2.R;
+import com.thedancercodes.retrofiti_v2.adapters.SongsAdapter;
 import com.thedancercodes.retrofiti_v2.di.Injector;
 import com.thedancercodes.retrofiti_v2.models.User;
 

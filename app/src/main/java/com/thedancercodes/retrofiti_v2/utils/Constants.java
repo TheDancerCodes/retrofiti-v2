@@ -1,4 +1,4 @@
-package com.thedancercodes.retrofiti_v2;
+package com.thedancercodes.retrofiti_v2.utils;
 
 /**
  * Created by TheDancerCodes on 04/10/2018.
